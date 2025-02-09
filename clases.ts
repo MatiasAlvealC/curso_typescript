@@ -1,9 +1,14 @@
 // class
 
 class Rectangulo {
-  ancho: number;
-  alto: number;
-  
+  //private ancho: number;
+  //private alto: number;
+
+  // redonly es el final de java
+  // hace que sea inmutable
+  readonly ancho: number;
+  readonly alto: number;
+
   constructor(ancho:number, alto:number) {
     console.log("Constructor()")
     this.ancho = ancho
