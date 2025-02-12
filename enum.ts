@@ -2,13 +2,13 @@
 // tipo enumeral
 
 enum DiaSemana {
-  Lunes,
-  Martes,
+  Lunes = 401,
+  Martes = 501,
   Miercoles,
-  Jueves,
+  Jueves = 701,
   Viernes,
   Sabado,
-  Doming,
+  Domingo,
 }
 
 interface CitaMedica {
@@ -16,5 +16,16 @@ interface CitaMedica {
 }
 
 let c: CitaMedica = {
-  dia: DiaSemana.Doming
+  dia: DiaSemana.Domingo
+}
+
+
+console.log(c)
+
+// con los tipos computados  podemos hacer que sea multiplicado
+
+enum Permisos {
+  EscribirMesnajes = 1,
+  Reaccionar = EscribirMesnajes *2,
+  EnviarEnlaces = Reaccionar *2,
 }
