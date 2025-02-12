@@ -28,3 +28,12 @@ function procesar (n: Geometria) {
 
 // tambien es posible hacer check que sirven para comprobar tipos
 // instanceof
+// no funciona con interfaces
+
+function esUnCuadrado(x:any): x is Cuadrado {
+  return x.lados && x.lados == 4 && x.pintar
+}
+
+function esUnTriangulo(x: any): x is Triangulo {
+  return x.base
+}
