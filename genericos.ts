@@ -21,7 +21,7 @@ let payload2: Respuesta<boolean,object> = {
 
 
 // genericos en funciones
-
+/*
 type Nota = { mensaje: string }
 type NotaColorida = Nota & { color: string }
 type Foto = { url: string }
@@ -35,3 +35,38 @@ function subir<Publicacion> (p: Publicacion): Publicacion {
 
 let x = subir<Nota>( {mensaje: ' hola mundo'})
 let post: Nota = {mensaje: 'hola mundo'}
+
+*/
+// restricciones en genericos
+
+interface Post {
+  id: number
+}
+
+interface Nota extends Post {
+  mensaje: string
+}
+
+interface NotaColorida extends Nota {
+  color: string 
+}
+
+interface Foto extends Post {
+  url: string
+}
+
+interface Video extends Foto {
+  duracion: number
+}
+
+function subir<
+  Publicacion extends Post,
+  Extra> (
+    p: Publicacion,
+    e?: Extra
+  ): Publicacion {
+  return p
+}
+
+let post: Nota =  {id: 0, mensaje: ' hola mundo'}
+//let x = subir(5)
