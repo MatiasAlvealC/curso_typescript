@@ -1,17 +1,18 @@
+"use strict";
 // function
 // [datos] ---> [sumar] ---> [datos]
 function sumar(m, n) {
-    var suma = m + n;
-    console.log("".concat(m, " + ").concat(n, " = ").concat(suma));
+    let suma = m + n;
+    console.log(`${m} + ${n} = ${suma}`);
     return suma;
 }
 sumar(4, 3);
-var restar = function (m, n) {
-    var resta = m - n;
-    console.log("".concat(m, " + ").concat(n, " = ").concat(resta));
+let restar = function (m, n) {
+    let resta = m - n;
+    console.log(`${m} + ${n} = ${resta}`);
     return resta;
 };
 restar(5, 4);
-var multiplicar;
-multiplicar = function (m, n) { return m * n; };
+let multiplicar;
+multiplicar = (m, n) => m * n;
 console.log(multiplicar(4, 3));
