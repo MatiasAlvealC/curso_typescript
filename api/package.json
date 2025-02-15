@@ -11,8 +11,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^22.13.4",
     "rimraf": "^6.0.1",
     "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "epress": "^0.0.1-security",
+    "express": "^4.21.2"
   }
 }
