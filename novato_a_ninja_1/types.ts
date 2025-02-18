@@ -69,3 +69,42 @@ console.log(thor.isActive) //-> true
 
 // Type index
 
+type HeroProperties2 ={
+  isActive: boolean,
+  address: {
+    planet: string,
+    city: string
+  }
+}
+
+const addressHero: HeroProperties2['address'] = {
+  planet: 'Earth',
+  city: 'Madrid'
+}
+
+const address2 = {
+  planet: 'Earth',
+  city: 'Madrid'
+}
+
+// typeof en TS te permite no solo saber que tipo es sino tambien 
+// crear tipo de algo ya existent
+type Address = typeof address2
+
+const addressTwitch: Address = {
+  planet: 'Mars',
+  city: "Twitch"
+}
+
+
+// type from functioon return
+
+function createAddress() {
+  return {
+    planet: "Tierra",
+    city: "Barcelona"
+  }
+}
+
+type Address2 = ReturnType<typeof createAddress> // guardamos el tipo de lo que devuelve la funcion 
+
